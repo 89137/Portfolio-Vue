@@ -5,6 +5,7 @@ import TheHeader from './components/nav/TheHeader.vue';
 import NotFound from './components/nav/NotFound.vue';
 import SubPage from './components/pages/SubPage.vue';
 import ThirdPage from './components/pages/ThirdPage.vue';
+import ContactPage from './components/pages/ContactPage.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +28,12 @@ const router = createRouter({
       path: '/thirdpage',
       components: { default: ThirdPage, header: TheHeader },
       meta: { title: 'thirdpage' },
+    },
+    {
+      name: 'contactpage',
+      path: '/contactpage',
+      components: { default: ContactPage, header: TheHeader },
+      meta: { title: 'contactpage' },
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],
