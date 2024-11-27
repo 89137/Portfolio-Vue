@@ -47,20 +47,4 @@ h2 {
   margin: 0.75rem 0;
   text-align: center;
 }
-
-button {
-  font: inherit;
-  border: 1px solid #c70053;
-  background-color: #c70053;
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-button:hover,
-button:active {
-  background-color: #e24d8b;
-  border-color: #e24d8b;
-}
 </style>

@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h2>HeadPage Content</h2>
-    <base-card class="basecard"> frog</base-card>
+    <base-card>
+      <h2>Headpage Content</h2>
+    </base-card>
   </div>
 </template>
 
