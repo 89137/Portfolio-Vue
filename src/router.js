@@ -10,18 +10,18 @@ import ContactPage from './components/pages/ContactPage.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/HeadPage' },
+    { path: '/', redirect: '/headpage' },
     {
-      name: 'HeadPage',
-      path: '/HeadPage',
+      name: 'headpage',
+      path: '/headpage',
       components: { default: HeadPage, header: TheHeader },
-      meta: { title: 'HeadPage' },
+      meta: { title: 'headpage' },
     },
     {
       name: 'subpage',
       path: '/subpage',
       components: { default: SubPage, header: TheHeader },
-      meta: { title: 'SubPage' },
+      meta: { title: 'subpage' },
     },
     {
       name: 'thirdpage',
