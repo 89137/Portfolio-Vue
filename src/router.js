@@ -30,10 +30,10 @@ const router = createRouter({
       meta: { title: 'thirdpage' },
     },
     {
-      name: 'contactpage',
-      path: '/contactpage',
+      name: 'contact',
+      path: '/contact',
       components: { default: ContactPage, header: TheHeader },
-      meta: { title: 'contactpage' },
+      meta: { title: 'contact' },
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],

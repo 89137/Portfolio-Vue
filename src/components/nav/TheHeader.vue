@@ -19,7 +19,7 @@
         >
       </nav>
       <router-link
-        to="/contactpage"
+        to="/contact"
         class="contact-button"
         exact-active-class="active-button"
       >
