@@ -2,7 +2,7 @@
   <header>
     <container>
       <div class="logo">
-        <img src="/BelljahhLogo.png" alt="Website Logo" />
+        <img src="/images/BelljahhLogoD.png" alt="Website Logo" />
       </div>
       <nav>
         <router-link to="/headpage" class="nav-link" exact-active-class="active"
@@ -27,9 +27,6 @@
       </router-link>
     </container>
   </header>
-  <main>
-    <router-view></router-view>
-  </main>
 </template>
 
 <script>
@@ -57,20 +54,23 @@ body {
 }
 
 header {
+  padding-top: 9px;
   width: 100%;
   display: flex;
   justify-content: center;
+  backdrop-filter: blur(32px);
+  background-color: rgba(4, 6, 21, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 50, 107, 0.116);
 }
 
 container {
   width: 100%;
   max-width: 1200px;
-  height: 6rem;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 .logo img {
@@ -86,11 +86,11 @@ nav {
 }
 
 .nav-link {
+  font-family: 'Inter28ptSemiBold', sans-serif; /* Apply your custom font */
   color: white;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
-  font-weight: bold;
   font-size: 1.25rem;
   transition: background-color 0.3s ease;
 }
@@ -107,11 +107,12 @@ nav {
 }
 
 .contact-button {
-  border: none;
-  color: white;
+  font-family: 'Inter28ptSemiBold', sans-serif;
+  color: black;
+  background-color: #ffffff;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.25rem;
@@ -120,10 +121,12 @@ nav {
 .contact-button:hover {
   background-color: #50fff056;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .contact-button.active {
   background-color: #5c4de29f;
+  color: white;
 }
 
 .contact-link {
@@ -134,5 +137,42 @@ nav {
 
 .contact-button:hover .contact-link {
   color: rgb(0, 0, 0);
+}
+
+@media (max-width: 950px) {
+  header {
+    padding-top: 1rem;
+  }
+
+  container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .logo img {
+    height: 3rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
 }
 </style>

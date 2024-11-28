@@ -1,50 +1,59 @@
 <template>
-  <main>
-    <router-view name="header"></router-view>
-    <router-view></router-view>
-  </main>
+  <div class="app-container">
+    <Background />
+    <main>
+      <router-view name="header"></router-view>
+      <router-view></router-view>
+    </main>
+  </div>
 </template>
+
+<script>
+import Background from './components/nav/Background.vue';
+
+export default {
+  components: {
+    Background,
+  },
+};
+</script>
 
 <style>
 * {
   box-sizing: border-box;
-}
-html {
-  font-family: sans-serif;
-}
-body {
-  margin: 0;
-  background-color: #040615;
-}
-section {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 2rem auto;
-  max-width: 40rem;
-  padding: 1rem;
-  border-radius: 12px;
-}
-
-ul {
-  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 
-li {
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  width: 15rem;
-  margin: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+  /* background-color: #1b1a1f; */
 }
 
-h2 {
-  margin: 0.75rem 0;
-  text-align: center;
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+/* Fade transition styles */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
 </style>
