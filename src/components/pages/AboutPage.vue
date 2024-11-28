@@ -4,7 +4,7 @@
       <!-- Header Section -->
       <div class="glass-card header">
         <h1>Mattia Warning</h1>
-        <h2>&lt;Software Developer /&gt;</h2>
+        <h2>&lt;Software Developer. /&gt;</h2>
         <p class="subtitle">Vue.js & Front-end Enthusiast</p>
       </div>
 
