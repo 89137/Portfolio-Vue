@@ -5,26 +5,25 @@
         <img src="/images/BelljahhLogoD.png" alt="Website Logo" />
       </div>
       <nav>
-        <router-link to="/headpage" class="nav-link" exact-active-class="active"
-          >HeadPage</router-link
+        <router-link to="/" class="nav-link" exact-active-class="active"
+          >Home</router-link
         >
-        <router-link to="/subpage" class="nav-link" exact-active-class="active"
-          >SubPage</router-link
+        <router-link to="/about" class="nav-link" exact-active-class="active"
+          >About</router-link
         >
-        <router-link
-          to="/thirdpage"
-          class="nav-link"
-          exact-active-class="active"
-          >ThirdPage</router-link
+        <router-link to="/projects" class="nav-link" exact-active-class="active"
+          >Projects</router-link
+        >
+        <router-link to="/cv" class="nav-link" exact-active-class="active"
+          >cv</router-link
         >
       </nav>
       <router-link
         to="/contact"
         class="contact-button"
-        exact-active-class="active-button"
+        exact-active-class="active"
+        >Contact</router-link
       >
-        Get in Touch
-      </router-link>
     </container>
   </header>
 </template>

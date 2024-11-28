@@ -1,10 +1,10 @@
 <template>
   <container>
-    <base-card>
+    <div>
       <h1 class="gradient-text">Software Engineer</h1>
       <h2 class="gradient-text">Headpage Content</h2>
       <h3 class="gradient-text">Toads</h3>
-    </base-card>
+    </div>
   </container>
 </template>
 
@@ -15,6 +15,7 @@ container {
   height: 85vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 div {
   background-color: none;
@@ -36,10 +37,10 @@ h3 {
 
 .gradient-text {
   background: linear-gradient(to right, white, rgb(105, 183, 209));
-  -webkit-background-clip: text; /* Ensures gradient applies to the text only */
-  -webkit-text-fill-color: transparent; /* Makes the text transparent to reveal the gradient */
-  text-fill-color: transparent; /* Standard version for non-WebKit browsers */
-  font-weight: bold; /* Optional: Adjust weight for better visibility */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-weight: bold;
 }
 
 @media (max-width: 950px) {

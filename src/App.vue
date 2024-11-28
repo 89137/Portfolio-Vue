@@ -30,16 +30,13 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
   font-family: sans-serif;
-  /* background-color: #1b1a1f; */
 }
 
 .app-container {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 main {

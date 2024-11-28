@@ -1,39 +1,40 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HeadPage from './components/pages/HeadPage.vue';
+import HomePage from './components/pages/HomePage.vue';
+import AboutPage from './components/pages/AboutPage.vue';
+import ProjectsPage from './components/pages/ProjectsPage.vue';
+import CVPage from './components/pages/CVPage.vue';
+import ContactPage from './components/pages/ContactPage.vue';
 import TheHeader from './components/nav/TheHeader.vue';
 import NotFound from './components/nav/NotFound.vue';
-import SubPage from './components/pages/SubPage.vue';
-import ThirdPage from './components/pages/ThirdPage.vue';
-import ContactPage from './components/pages/ContactPage.vue';
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/headpage' },
     {
-      name: 'headpage',
-      path: '/headpage',
-      components: { default: HeadPage, header: TheHeader },
-      meta: { title: 'headpage' },
+      path: '/',
+      components: { default: HomePage, header: TheHeader },
+      meta: { title: 'Home' },
     },
     {
-      name: 'subpage',
-      path: '/subpage',
-      components: { default: SubPage, header: TheHeader },
-      meta: { title: 'subpage' },
+      path: '/about',
+      components: { default: AboutPage, header: TheHeader },
+      meta: { title: 'About' },
     },
     {
-      name: 'thirdpage',
-      path: '/thirdpage',
-      components: { default: ThirdPage, header: TheHeader },
-      meta: { title: 'thirdpage' },
+      path: '/projects',
+      components: { default: ProjectsPage, header: TheHeader },
+      meta: { title: 'Projects' },
     },
     {
-      name: 'contact',
+      path: '/cv',
+      components: { default: CVPage, header: TheHeader },
+      meta: { title: 'CV' },
+    },
+    {
       path: '/contact',
       components: { default: ContactPage, header: TheHeader },
-      meta: { title: 'contact' },
+      meta: { title: 'Contact' },
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],

@@ -7,12 +7,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Background',
-};
-</script>
-
 <style scoped>
 .background {
   position: fixed;
