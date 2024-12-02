@@ -5,24 +5,43 @@
       Mattia Warning <br />
       <span class="title-gradient">A Creative Frontend Developer.</span>
     </h2>
+    <h3>Get in touch with me!</h3>
     <div class="social-links">
       <a
         href="https://github.com/YourGithubUsername"
         target="_blank"
         class="social-link"
       >
-        <img src="/images/github.png" alt="GitHub" />
+        <FontAwesomeIcon :icon="faGithub" class="social-icon" />
       </a>
       <a
         href="https://linkedin.com/in/YourLinkedInUsername"
         target="_blank"
         class="social-link"
       >
-        <img src="/images/linkedin.png" alt="LinkedIn" />
+        <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
       </a>
     </div>
   </div>
 </template>
+
+<script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+export default {
+  components: {
+    FontAwesomeIcon,
+  },
+  data() {
+    return {
+      faGithub,
+      faLinkedin,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .intro-wrapper {
@@ -69,21 +88,26 @@ h3 {
 .social-links {
   display: flex;
   gap: 2rem;
-  margin-top: 1rem;
 }
 
 .social-link {
-  transition: transform 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .social-link:hover {
   transform: translateY(-3px);
 }
 
-.social-link img {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1); /* Makes icons white */
+.social-link:hover .social-icon {
+  color: #50fff0;
 }
 
 @media (max-width: 950px) {
@@ -103,8 +127,13 @@ h3 {
   h3 {
     font-size: 1.5rem;
   }
+
   .social-links {
     justify-content: center;
+  }
+
+  .social-icon {
+    font-size: 1.75rem;
   }
 }
 
