@@ -2,6 +2,9 @@
   <div class="home-container">
     <intro-home></intro-home>
   </div>
+  <div>
+    <h1>Home Page</h1>
+  </div>
 </template>
 
 <script>
