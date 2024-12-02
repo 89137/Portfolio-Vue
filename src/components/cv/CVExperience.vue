@@ -1,5 +1,5 @@
 <template>
-  <div class="glass-card">
+  <BaseCard>
     <h3>/* Experience */</h3>
     <div class="content-card">
       <div class="role-header">
@@ -12,7 +12,7 @@
         <li>Work with Vue.js, Nuxt, Contentful and Azure</li>
       </ul>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <style scoped>
@@ -63,7 +63,7 @@ li {
 }
 
 li:before {
-  content: '▹';
+  content: "▹";
   position: absolute;
   left: 0;
   color: #50fff0;

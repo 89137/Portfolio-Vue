@@ -1,5 +1,5 @@
 <template>
-  <div class="glass-card">
+  <BaseCard>
     <h3>// Certifications</h3>
     <div class="cert-grid">
       <a
@@ -17,7 +17,7 @@
         Vue - Complete Guide
       </a>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <style scoped>

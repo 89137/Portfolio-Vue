@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from './components/pages/HomePage.vue';
-import AboutPage from './components/pages/AboutPage.vue';
 import ProjectsPage from './components/pages/ProjectsPage.vue';
 import CVPage from './components/pages/CVPage.vue';
 import ContactPage from './components/pages/ContactPage.vue';
@@ -14,10 +13,6 @@ const router = createRouter({
     {
       path: '/',
       components: { default: HomePage, header: TheHeader },
-    },
-    {
-      path: '/about',
-      components: { default: AboutPage, header: TheHeader },
     },
     {
       path: '/projects',

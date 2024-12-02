@@ -1,12 +1,12 @@
 <template>
-  <div class="glass-card">
+  <BaseCard>
     <h3>// Summary</h3>
     <p class="summary">
       Junior front-end developer with experience in Vue.js, Nuxt3, and
       TypeScript. Currently interning at Robeco, focusing on web development and
       modern frameworks.
     </p>
-  </div>
+  </BaseCard>
 </template>
 
 <style scoped>

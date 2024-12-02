@@ -65,6 +65,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+  padding: 0 2rem; /* Adjust for spacing */
 }
 
 .welcome-card {
@@ -84,8 +86,11 @@ export default {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Smaller min size */
+  gap: 1rem; /* Adjust spacing */
 }
 
 .project-card {

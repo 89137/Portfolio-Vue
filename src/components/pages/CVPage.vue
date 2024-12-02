@@ -7,7 +7,10 @@
       <CVEducation />
       <CVCertifications />
     </div>
-    <CVLanguages />
+    <div class="two-column">
+      <CVTechStack />
+      <CVLanguages />
+    </div>
   </div>
 </template>
 
@@ -18,6 +21,7 @@ import CVExperience from '../cv/CVExperience.vue';
 import CVEducation from '../cv/CVEducation.vue';
 import CVCertifications from '../cv/CVCertifications.vue';
 import CVLanguages from '../cv/CVLanguages.vue';
+import CVTechStack from '../cv/CVTechStack.vue';
 
 export default {
   components: {
@@ -27,6 +31,7 @@ export default {
     CVCertifications,
     CVLanguages,
     CVHeader,
+    CVTechStack,
   },
 };
 </script>
@@ -48,18 +53,6 @@ export default {
   gap: 2rem;
 }
 
-.glass-card {
-  background-color: rgba(4, 6, 21, 0.5);
-  backdrop-filter: blur(32px);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 50, 107, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.glass-card:hover {
-  transform: translateY(-2px);
-}
 
 h3 {
   color: #50fff0;

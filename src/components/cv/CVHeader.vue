@@ -1,8 +1,10 @@
 <template>
-  <div class="glass-card header">
-    <h1>Mattia Warning</h1>
-    <h2>&lt;Junior Front-End Developer/&gt;</h2>
-  </div>
+  <BaseCard>
+    <div class="header">
+      <h1>Mattia Warning</h1>
+      <h2>&lt;Junior Front-End Developer/&gt;</h2>
+    </div>
+  </BaseCard>
 </template>
 
 <style scoped>

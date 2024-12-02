@@ -1,33 +1,27 @@
 <template>
-  <div class="home-container">
-    <BaseCard>
-      <div class="intro-wrapper">
-        <h1 class="title-gradient">Software Engineer</h1>
-        <h2 class="name-gradient">
-          Mattia Warning <br />
-          <span class="title-gradient">A Creative Frontend Developer.</span>
-        </h2>
-        <h3>Get in touch with me!</h3>
-        <div class="social-links">
-          <a
-            href="https://github.com/89137"
-            target="_blank"
-            class="social-link"
-          >
-            <FontAwesomeIcon :icon="faGithub" class="social-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/mattia-warning-engineer/"
-            target="_blank"
-            class="social-link"
-          >
-            <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
-          </a>
-          <ContactButton />
-        </div>
+  <BaseCard class="header-card">
+    <div class="intro-wrapper">
+      <h1 class="title-gradient">Software Engineer</h1>
+      <h2 class="name-gradient">
+        Mattia Warning <br />
+        <span class="title-gradient">A Creative Frontend Developer.</span>
+      </h2>
+      <h3>Get in touch with me!</h3>
+      <div class="social-links">
+        <a href="https://github.com/89137" target="_blank" class="social-link">
+          <FontAwesomeIcon :icon="faGithub" class="social-icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mattia-warning-engineer/"
+          target="_blank"
+          class="social-link"
+        >
+          <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
+        </a>
+        <ContactButton />
       </div>
-    </BaseCard>
-  </div>
+    </div>
+  </BaseCard>
 </template>
 
 <script>
@@ -53,17 +47,25 @@ export default {
 </script>
 
 <style scoped>
+.header-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  padding: 4rem 2rem;
+  width: 70%; /* Adjust width to be less than 100% */
+  max-width: 1000px; /* Set a max width */
+}
+
 .intro-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 1200px;
   width: 100%;
-  padding: 2rem;
+  text-align: left; /* Align text to the left */
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -92,13 +94,6 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-}
-
-.home-container {
-  height: 30vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .social-links {
@@ -130,11 +125,11 @@ h3 {
 @media (max-width: 950px) {
   .intro-wrapper {
     padding: 1rem;
-    text-align: center;
+    text-align: center; /* Center text on smaller screens */
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   h2 {

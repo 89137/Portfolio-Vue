@@ -1,5 +1,5 @@
 <template>
-  <div class="glass-card project-card">
+  <BaseCard class="project-card">
     <div class="project-content">
       <div class="project-info">
         <h3>// {{ project.title }}</h3>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <script>

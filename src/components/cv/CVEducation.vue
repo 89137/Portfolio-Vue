@@ -1,12 +1,12 @@
 <template>
-  <div class="glass-card">
+  <BaseCard>
     <h3>{ Education }</h3>
     <div class="content-card">
       <h4>Mbo 4 Software Developer</h4>
       <p class="company">Grafisch Lyceum Rotterdam</p>
       <p class="highlight">Minor: Front end</p>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <style scoped>

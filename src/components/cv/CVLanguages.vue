@@ -1,5 +1,5 @@
 <template>
-  <div class="glass-card languages">
+  <BaseCard>
     <h3>/* Languages */</h3>
     <div class="lang-grid">
       <div class="lang-item">
@@ -11,7 +11,7 @@
         <span class="level">Advanced</span>
       </div>
     </div>
-  </div>
+  </BaseCard>
 </template>
 
 <style scoped>
