@@ -14,27 +14,22 @@ const router = createRouter({
     {
       path: '/',
       components: { default: HomePage, header: TheHeader },
-      meta: { title: 'Home' },
     },
     {
       path: '/about',
       components: { default: AboutPage, header: TheHeader },
-      meta: { title: 'About' },
     },
     {
       path: '/projects',
       components: { default: ProjectsPage, header: TheHeader },
-      meta: { title: 'Projects' },
     },
     {
       path: '/cv',
       components: { default: CVPage, header: TheHeader },
-      meta: { title: 'CV' },
     },
     {
       path: '/contact',
       components: { default: ContactPage, header: TheHeader },
-      meta: { title: 'Contact' },
     },
     { path: '/:notFound(.*)', component: NotFound },
   ],

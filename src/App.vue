@@ -1,10 +1,10 @@
 <template>
-  <div class="app-container">
-    <Background />
-    <main>
-      <router-view name="header"></router-view>
+  <div id="app" class="app-container">
+    <router-view name="header"></router-view>
+    <transition name="slide" mode="out-in">
       <router-view></router-view>
-    </main>
+    </transition>
+    <Background />
   </div>
 </template>
 
@@ -12,6 +12,7 @@
 import Background from './components/nav/Background.vue';
 
 export default {
+  name: 'App',
   components: {
     Background,
   },
@@ -45,12 +46,31 @@ main {
   height: 100%;
 }
 
-/* Fade transition styles */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+/* Slide transition styles */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.9s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
   opacity: 0;
 }
 </style>

@@ -1,18 +1,20 @@
 <template>
-  <div class="home-container">
-    <intro-home></intro-home>
-  </div>
   <div>
-    <h1>Home Page</h1>
+    <div class="home-container">
+      <intro-home></intro-home>
+    </div>
+    <content-home></content-home>
   </div>
 </template>
 
 <script>
 import IntroHome from '@/components/HomePage/IntroHome.vue';
+import ContentHome from '@/components/HomePage/ContentHome.vue';
 
 export default {
   components: {
     IntroHome,
+    ContentHome,
   },
 };
 </script>
