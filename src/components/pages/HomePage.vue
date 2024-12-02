@@ -21,7 +21,8 @@ export default {
 
 <style scoped>
 .home-container {
-  height: 60vh;
+  padding-top: 2rem;
+  height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
