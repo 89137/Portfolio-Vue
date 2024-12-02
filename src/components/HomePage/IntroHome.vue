@@ -7,20 +7,17 @@
     </h2>
     <h3>Get in touch with me!</h3>
     <div class="social-links">
-      <a
-        href="https://github.com/YourGithubUsername"
-        target="_blank"
-        class="social-link"
-      >
+      <a href="https://github.com/89137" target="_blank" class="social-link">
         <FontAwesomeIcon :icon="faGithub" class="social-icon" />
       </a>
       <a
-        href="https://linkedin.com/in/YourLinkedInUsername"
+        href="https://www.linkedin.com/in/mattia-warning-engineer/"
         target="_blank"
         class="social-link"
       >
         <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
       </a>
+      <ContactButton />
     </div>
   </div>
 </template>
@@ -71,23 +68,24 @@ h3 {
 
 .title-gradient {
   background: linear-gradient(to right, white, rgb(105, 183, 209));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   font-weight: bold;
 }
 
 .name-gradient {
   background: linear-gradient(to right, #50fff0, #5c4de2);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   font-weight: bold;
 }
 
 .social-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .social-link {

@@ -2,14 +2,12 @@ import { createApp } from 'vue';
 
 import App from './App.vue';
 import router from './router';
-import Basecard from './components/UI/BaseCard.vue';
+import ContactButton from './components/UI/ContactButton.vue';
 
 import '@/assets/styles/fonts.css';
 
 const app = createApp(App);
 
-app.component('base-card', Basecard);
+app.component('ContactButton', ContactButton);
 
-app.use(router);
-
-app.mount('#app');
+app.use(router).mount('#app');
