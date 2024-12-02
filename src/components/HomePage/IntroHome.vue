@@ -1,27 +1,33 @@
 <template>
-  <BaseCard>
-    <div class="intro-wrapper">
-      <h1 class="title-gradient">Software Engineer</h1>
-      <h2 class="name-gradient">
-        Mattia Warning <br />
-        <span class="title-gradient">A Creative Frontend Developer.</span>
-      </h2>
-      <h3>Get in touch with me!</h3>
-      <div class="social-links">
-        <a href="https://github.com/89137" target="_blank" class="social-link">
-          <FontAwesomeIcon :icon="faGithub" class="social-icon" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mattia-warning-engineer/"
-          target="_blank"
-          class="social-link"
-        >
-          <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
-        </a>
-        <ContactButton />
+  <div class="home-container">
+    <BaseCard>
+      <div class="intro-wrapper">
+        <h1 class="title-gradient">Software Engineer</h1>
+        <h2 class="name-gradient">
+          Mattia Warning <br />
+          <span class="title-gradient">A Creative Frontend Developer.</span>
+        </h2>
+        <h3>Get in touch with me!</h3>
+        <div class="social-links">
+          <a
+            href="https://github.com/89137"
+            target="_blank"
+            class="social-link"
+          >
+            <FontAwesomeIcon :icon="faGithub" class="social-icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mattia-warning-engineer/"
+            target="_blank"
+            class="social-link"
+          >
+            <FontAwesomeIcon :icon="faLinkedin" class="social-icon" />
+          </a>
+          <ContactButton />
+        </div>
       </div>
-    </div>
-  </BaseCard>
+    </BaseCard>
+  </div>
 </template>
 
 <script>
@@ -86,6 +92,13 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+
+.home-container {
+  height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-links {

@@ -1,18 +1,15 @@
 <template>
-  <div id="app" class="app-container">
-    <router-view name="header"></router-view>
-    <transition name="slide" mode="out-in">
-      <router-view></router-view>
-    </transition>
-    <Background />
-  </div>
+  <router-view name="header"></router-view>
+  <transition name="slide" mode="out-in">
+    <router-view></router-view>
+  </transition>
+  <Background />
 </template>
 
 <script>
 import Background from './components/nav/Background.vue';
 
 export default {
-  name: 'App',
   components: {
     Background,
   },
@@ -32,12 +29,6 @@ body {
   padding: 0;
   height: 100%;
   font-family: sans-serif;
-}
-
-.app-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
 }
 
 main {

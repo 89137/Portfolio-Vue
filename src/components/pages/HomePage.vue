@@ -1,10 +1,9 @@
 <template>
-  <contained>
-    <div class="home-container">
-      <intro-home></intro-home>
-    </div>
+  <div>
+    <intro-home></intro-home>
+
     <content-home></content-home>
-  </contained>
+  </div>
 </template>
 
 <script>
@@ -19,12 +18,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.home-container {
-  padding-top: 2rem;
-  height: 55vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>
+<style scoped></style>
