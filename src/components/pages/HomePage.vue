@@ -1,8 +1,10 @@
 <template>
-  <div class="home-container">
-    <intro-home></intro-home>
-  </div>
-  <content-home></content-home>
+  <contained>
+    <div class="home-container">
+      <intro-home></intro-home>
+    </div>
+    <content-home></content-home>
+  </contained>
 </template>
 
 <script>
@@ -19,7 +21,7 @@ export default {
 
 <style scoped>
 .home-container {
-  height: 55vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
