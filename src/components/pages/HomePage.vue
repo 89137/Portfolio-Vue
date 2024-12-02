@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div class="home-container">
-      <intro-home></intro-home>
-    </div>
-    <content-home></content-home>
+  <div class="home-container">
+    <intro-home></intro-home>
   </div>
+  <content-home></content-home>
 </template>
 
 <script>
