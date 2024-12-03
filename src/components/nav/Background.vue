@@ -1,7 +1,7 @@
 <template>
   <div class="background">
     <video autoplay muted loop id="background-video">
-      <source src="/images/stars-vmake.mp4" type="video/mp4" />
+      <source src="/images/nightsky.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>

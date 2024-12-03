@@ -2,10 +2,10 @@
   <div class="projects-container">
     <div class="projects-content">
       <!-- Header Section -->
-      <div class="glass-card header">
+      <BaseCard class="header">
         <h1>My Projects</h1>
         <h2>{ Recent Work & Contributions }</h2>
-      </div>
+      </BaseCard>
 
       <!-- Projects List -->
       <div class="projects-list">
