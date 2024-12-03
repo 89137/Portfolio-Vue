@@ -110,7 +110,7 @@ container {
 
 .logo img {
   height: calc(1rem + 2vw + 2vh);
-  max-height:  90px;
+  max-height: 90px;
   width: auto;
 }
 
@@ -137,7 +137,6 @@ nav {
 
 .nav-link.active {
   background-color: #5c4de29f;
-  border: 1px solid rgba(0, 140, 255, 0.144);
   color: white;
   font-weight: bold;
 }
@@ -226,9 +225,8 @@ nav {
   }
 
   .contact-button {
-    font-size: 1.80rem;
+    font-size: 1.8rem;
   }
-
 }
 
 @media (max-width: 950px) {
@@ -270,7 +268,7 @@ nav {
   }
 
   .logo img {
-    height: 5rem;
+    height: 4.5rem;
   }
 
   .contact-button {
