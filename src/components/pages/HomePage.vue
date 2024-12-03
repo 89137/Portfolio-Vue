@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderHome from '@/components/HomePage/HeaderHome.vue';
-import ContentHome from '@/components/HomePage/ContentHome.vue';
+import HeaderHome from '@/components/homepage/HeaderHome.vue';
+import ContentHome from '@/components/homepage/ContentHome.vue';
 
 export default {
   components: {
