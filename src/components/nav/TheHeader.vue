@@ -8,11 +8,11 @@
         <router-link to="/" class="nav-link" exact-active-class="active"
           >Home</router-link
         >
+        <router-link to="/about" class="nav-link" exact-active-class="active"
+          >AboutMe</router-link
+        >
         <router-link to="/projects" class="nav-link" exact-active-class="active"
           >Projects</router-link
-        >
-        <router-link to="/cv" class="nav-link" exact-active-class="active"
-          >cv</router-link
         >
       </nav>
       <router-link
