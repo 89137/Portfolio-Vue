@@ -4,30 +4,67 @@
       <div class="logo">
         <img src="/images/BelljahhLogoD.png" alt="Website Logo" />
       </div>
-      <nav>
+      <div class="menu-toggle" @click="toggleMenu" v-show="isMobile">
+        <div class="hamburger" :class="{ open: isMenuOpen }">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav :class="{ 'mobile-menu': isMobile, 'show-menu': isMenuOpen }">
         <router-link to="/" class="nav-link" exact-active-class="active"
           >Home</router-link
         >
         <router-link to="/about" class="nav-link" exact-active-class="active"
-          >AboutMe</router-link
+          >About</router-link
         >
         <router-link to="/projects" class="nav-link" exact-active-class="active"
           >Projects</router-link
         >
+        <router-link
+          to="/contact"
+          class="nav-link"
+          exact-active-class="active"
+          v-show="isMobile && isMenuOpen"
+          >Contact</router-link
+        >
       </nav>
-      <router-link
-        to="/contact"
-        class="contact-button"
-        exact-active-class="active"
-        >Contact</router-link
-      >
+      <ContactButton />
     </container>
   </header>
 </template>
 
 <script>
+import ContactButton from '@/components/UI/ContactButton.vue';
+
 export default {
-  setup() {},
+  components: {
+    ContactButton,
+  },
+  data() {
+    return {
+      isMenuOpen: false,
+      isMobile: false,
+    };
+  },
+  mounted() {
+    this.checkMobile();
+    window.addEventListener('resize', this.checkMobile);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.checkMobile);
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    checkMobile() {
+      this.isMobile = window.innerWidth <= 950;
+      if (!this.isMobile) {
+        this.isMenuOpen = false;
+      }
+    },
+  },
 };
 </script>
 
@@ -52,6 +89,8 @@ body {
 header {
   padding-top: 9px;
   width: 100%;
+  position: relative;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   backdrop-filter: blur(32px);
@@ -135,40 +174,95 @@ nav {
   color: rgb(0, 0, 0);
 }
 
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #50fff0;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
 @media (max-width: 950px) {
-  header {
-    padding-top: 1rem;
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: rgba(4, 6, 21, 0.95);
+    backdrop-filter: blur(32px);
+    border-radius: 8px;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+    box-shadow: 0 4px 20px rgba(0, 50, 107, 0.2);
+    z-index: 1000;
+  }
+
+  nav.show-menu {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
   }
 
   container {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 
   .logo img {
     height: 3rem;
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .nav-link {
-    padding: 0.75rem 1.25rem;
-    font-size: 1.1rem;
-  }
-
   .contact-button {
-    padding: 0.75rem 1.25rem;
-    font-size: 1.1rem;
-    margin-top: 1rem;
+    display: none;
   }
 }
 </style>

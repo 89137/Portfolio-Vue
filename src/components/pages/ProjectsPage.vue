@@ -1,13 +1,11 @@
 <template>
   <div class="projects-container">
     <div class="projects-content">
-      <!-- Header Section -->
       <BaseCard class="header">
         <h1>My Projects</h1>
         <h2>{ Recent Work & Contributions }</h2>
       </BaseCard>
 
-      <!-- Projects List -->
       <div class="projects-list">
         <ProjectCard
           v-for="project in projects"
@@ -75,9 +73,9 @@ h2 {
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .projects-container {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   h1 {

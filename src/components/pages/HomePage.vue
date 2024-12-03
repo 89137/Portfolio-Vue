@@ -24,4 +24,10 @@ export default {
   gap: 2rem;
   padding-top: 5rem;
 }
+
+@media (max-width: 950px) {
+  .home-page {
+    padding-top: 2em;
+  }
+}
 </style>
