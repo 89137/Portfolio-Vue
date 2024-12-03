@@ -29,7 +29,7 @@
           >Contact</router-link
         >
       </nav>
-      <ContactButton />
+      <ContactButton v-show="!isMobile || !isMenuOpen" />
     </container>
   </header>
 </template>
@@ -89,13 +89,12 @@ body {
 header {
   padding-top: 9px;
   width: 100%;
-  position: relative;
-  z-index: 1000;
   display: flex;
   justify-content: center;
   backdrop-filter: blur(32px);
   background-color: rgba(4, 6, 21, 0.5);
   box-shadow: 0 2px 8px rgba(0, 50, 107, 0.116);
+  position: relative;
 }
 
 container {
@@ -109,7 +108,7 @@ container {
 }
 
 .logo img {
-  height: 4rem;
+  height: calc(1rem + 2vw + 2vh);
   width: auto;
 }
 
@@ -126,7 +125,7 @@ nav {
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
-  font-size: 1.25rem;
+  font-size: calc(0.5rem + 0.5vw + 0.5vh);
   transition: background-color 0.3s ease;
 }
 
@@ -150,7 +149,7 @@ nav {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.25rem;
+  font-size: calc(0.75rem + 0.5vw + 0.5vh);
 }
 
 .contact-button:hover {
@@ -219,6 +218,21 @@ nav {
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
 @media (max-width: 950px) {
   .menu-toggle {
     display: block;
@@ -226,22 +240,25 @@ nav {
 
   nav.mobile-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    right: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
     background-color: rgba(4, 6, 21, 0.95);
     backdrop-filter: blur(32px);
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 0 0 0 8px;
+    padding: 2rem 1rem;
     flex-direction: column;
-    gap: 0.5rem;
-    min-width: 200px;
+    gap: 1rem;
     box-shadow: 0 4px 20px rgba(0, 50, 107, 0.2);
-    z-index: 1000;
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
   }
 
   nav.show-menu {
-    display: flex;
+    transform: translateX(0);
   }
 
   .nav-link {
@@ -258,7 +275,7 @@ nav {
   }
 
   .logo img {
-    height: 3rem;
+    height: 5rem;
   }
 
   .contact-button {
