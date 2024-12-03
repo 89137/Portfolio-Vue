@@ -222,11 +222,11 @@ nav {
 
 @media (min-width: 3000px) {
   .nav-link {
-    font-size: 1.80rem;
+    font-size: 1.75rem;
   }
 
   .contact-button {
-    font-size: 2rem;
+    font-size: 1.80rem;
   }
 
 }
