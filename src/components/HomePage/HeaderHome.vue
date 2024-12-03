@@ -2,9 +2,9 @@
   <div class="header-wrapper">
     <BaseCard class="header-card">
       <div class="intro-wrapper">
-        <h1 class="title-gradient">Software Engineer</h1>
+        <h1 class="title-gradient">- - - - - - - -</h1>
         <h2 class="name-gradient">
-          Mattia Warning <br />
+          &lt;Mattia Warning/&gt; <br />
           <span class="title-gradient">A Creative Frontend Developer.</span>
         </h2>
         <h3>Get in touch with me!</h3>
