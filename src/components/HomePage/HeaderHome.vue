@@ -162,8 +162,16 @@ h3 {
 }
 
 @media (max-width: 480px) {
+    h1 {
+    font-size: 1rem;
+  }
+
   h2 {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 }
 </style>
