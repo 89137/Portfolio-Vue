@@ -2,7 +2,7 @@
   <div class="header-wrapper">
     <BaseCard class="header-card">
       <div class="intro-wrapper">
-        <h1 class="title-gradient">- - - - - - - -</h1>
+        <h1 class="title-gradient">Software Engineer</h1>
         <h2 class="name-gradient">
           &lt;Mattia Warning/&gt; <br />
           <span class="title-gradient">A Creative Frontend Developer.</span>
@@ -62,10 +62,10 @@ export default {
 .header-card {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align content to the left */
+  justify-content: flex-start;
   padding: 4rem 2rem;
-  width: 70%; /* Adjust width to be less than 100% */
-  max-width: 1000px; /* Set a max width */
+  width: 70%;
+  max-width: 1000px;
 }
 
 .intro-wrapper {
@@ -73,12 +73,12 @@ export default {
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin: 0;
+  margin-bottom: -10px;
 }
 
 h2 {
