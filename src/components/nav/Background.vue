@@ -1,33 +1,11 @@
 <template>
   <div class="background">
-    <video
-      autoplay
-      muted
-      loop
-      id="background-video"
-      @ended="handleVideoEnd"
-      @play="handleVideoPlay"
-    >
+    <video autoplay muted loop id="background-video">
       <source src="/images/nightsky.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    handleVideoEnd() {
-      const video = document.getElementById('background-video');
-      video.classList.add('fade-out');
-    },
-    handleVideoPlay() {
-      const video = document.getElementById('background-video');
-      video.classList.remove('fade-out');
-    },
-  },
-};
-</script>
 
 <style scoped>
 .background {
@@ -47,10 +25,5 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease-in-out;
-}
-
-#background-video.fade-out {
-  opacity: 0;
 }
 </style>
