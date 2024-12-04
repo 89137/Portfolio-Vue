@@ -35,13 +35,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ContactButton from '@/components/UI/ContactButton.vue';
-import BaseCard from '@/components/UI/BaseCard.vue';
+
 
 export default {
   components: {
     FontAwesomeIcon,
     ContactButton,
-    BaseCard,
   },
   data() {
     return {
