@@ -1,18 +1,18 @@
 <template>
   <div class="home-page">
-    <header-home></header-home>
-    <content-home></content-home>
+    <home-header></home-header>
+    <home-content></home-content>
   </div>
 </template>
 
 <script>
-import HeaderHome from '@/components/HomePage/HeaderHome.vue';
-import ContentHome from '@/components/HomePage/ContentHome.vue';
+import HomeHeader from '@/components/HomePage/HomeHeader.vue';
+import HomeContent from '@/components/HomePage/HomeContent.vue';
 
 export default {
   components: {
-    HeaderHome,
-    ContentHome,
+    HomeHeader,
+    HomeContent,
   },
 };
 </script>
