@@ -51,7 +51,7 @@ import { projects } from '../data/projects.vue';
 export default {
   data() {
     return {
-      displayedProjects: projects.slice(0, 2), 
+      displayedProjects: projects.slice(0, 2),
     };
   },
 };
