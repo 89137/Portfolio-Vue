@@ -4,24 +4,23 @@ console.log('Projects data loaded successfully');
 const projects = [
   {
     id: 1,
-    title: 'Test Project 1',
+    title: 'Portfolio Project',
     description: 'Project with both links',
     techStack: ['Vue.js'],
-    demoLink: 'https://demo.com',
-    githubLink: 'https://github.com',
+    demoLink: 'https://www.belljahh.nl/',
+    githubLink: 'https://github.com/89137/Portfolio-Vue/tree/main',
   },
   {
     id: 2,
-    title: 'Test Project 2',
+    title: 'Old Portfolio Project',
     description: 'Project with only GitHub',
-    techStack: ['Vue.js', 'nuxt3'],
-    demoLink: '',
-    githubLink: 'https://github.com',
+    techStack: ['Css', 'Js'],
+    demoLink: 'https://89137-github-io.vercel.app/',
+    githubLink: 'https://github.com/89137/89137.github.io',
   },
 ];
 
 export default {
-  name: 'Projects',
   setup() {
     return {
       projects,

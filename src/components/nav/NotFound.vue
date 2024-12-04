@@ -15,7 +15,6 @@
 import BaseCard from '@/components/UI/BaseCard.vue';
 
 export default {
-  name: 'NotFound',
   components: {
     BaseCard,
   },

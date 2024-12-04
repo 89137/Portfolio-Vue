@@ -25,7 +25,6 @@
 import BaseCard from '@/components/UI/BaseCard.vue';
 
 export default {
-  name: 'ContactPage',
   components: {
     BaseCard,
   },

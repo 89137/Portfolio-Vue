@@ -1,40 +1,42 @@
 <template>
   <div class="home-content">
     <div class="container">
-      <!-- Welcome Section -->
       <BaseCard class="welcome-card">
         <h2>Welcome to My Portfolio</h2>
         <p>Explore my journey in software development</p>
       </BaseCard>
 
-      <!-- Featured Projects Section -->
       <div class="projects-grid">
-        <!-- Project Card 1 -->
-        <BaseCard class="project-card">
-          <h3>// Portfolio Website</h3>
-          <p class="project-desc">Personal portfolio built with Vue.js</p>
+        <BaseCard
+          v-for="project in displayedProjects"
+          :key="project.id"
+          class="project-card"
+        >
+          <h3>// {{ project.title }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
           <div class="tech-stack">
-            <span class="tech-tag">Vue.js</span>
-            <span class="tech-tag">CSS</span>
-          </div>
-          <div class="card-links">
-            <router-link to="/projects" class="card-link"
-              >View Details</router-link
+            <span
+              v-for="tech in project.techStack"
+              :key="tech"
+              class="tech-tag"
             >
-          </div>
-        </BaseCard>
-
-        <!-- Project Card 2 -->
-        <BaseCard class="project-card">
-          <h3>// Project Two</h3>
-          <p class="project-desc">Another amazing project description</p>
-          <div class="tech-stack">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express</span>
+              {{ tech }}
+            </span>
           </div>
           <div class="card-links">
-            <router-link to="/projects" class="card-link"
-              >View Details</router-link
+            <a
+              v-if="project.demoLink"
+              :href="project.demoLink"
+              target="_blank"
+              class="card-link"
+              >Live Demo</a
+            >
+            <a
+              v-if="project.githubLink"
+              :href="project.githubLink"
+              target="_blank"
+              class="card-link"
+              >GitHub</a
             >
           </div>
         </BaseCard>
@@ -44,12 +46,13 @@
 </template>
 
 <script>
-import BaseCard from '@/components/UI/BaseCard.vue';
+import { projects } from '../data/projects.vue';
 
 export default {
-  name: 'ContentHome',
-  components: {
-    BaseCard,
+  data() {
+    return {
+      displayedProjects: projects.slice(0, 2), 
+    };
   },
 };
 </script>
