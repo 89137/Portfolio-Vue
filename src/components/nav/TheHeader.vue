@@ -269,6 +269,7 @@ nav {
 
   .logo img {
     height: 4.5rem;
+    padding-top: 5px;
   }
 
   .contact-button {
