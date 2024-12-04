@@ -4,17 +4,14 @@
     <router-view></router-view>
   </transition>
   <Background />
-  <SpeedInsights />
 </template>
 
 <script>
 import Background from './components/nav/Background.vue';
-import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 export default {
   components: {
     Background,
-    SpeedInsights,
   },
 };
 </script>
