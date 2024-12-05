@@ -29,6 +29,7 @@ body {
   padding: 0;
   height: 101vh;
   font-family: sans-serif;
+  
 }
 
 /* Slide transition styles */

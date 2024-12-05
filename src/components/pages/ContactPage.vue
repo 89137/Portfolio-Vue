@@ -54,8 +54,7 @@ export default {
 .contact-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -63,7 +62,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
+  width: 50vw;
+  max-width: 900px;
 }
 
 h1 {
@@ -71,6 +71,18 @@ h1 {
   margin-bottom: 1.5rem;
   color: #50fff0;
   text-align: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 140, 255, 0.144);
+  background-color: rgba(92, 77, 226, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 .form-group {
@@ -82,6 +94,7 @@ label {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #50fff0;
+  font-weight: bold;
 }
 
 input,
@@ -90,6 +103,12 @@ textarea {
   border-radius: 8px;
   border: 1px solid rgba(0, 140, 255, 0.144);
   font-size: 1.2rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #50fff0;
+  outline: none;
 }
 
 textarea {
@@ -119,6 +138,7 @@ textarea {
 @media (max-width: 768px) {
   .contact-container {
     padding: 1rem;
+    align-items: center;
   }
 
   form {
@@ -126,7 +146,7 @@ textarea {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 </style>
