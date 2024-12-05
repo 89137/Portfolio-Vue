@@ -17,6 +17,8 @@
   overflow: hidden;
   z-index: -1;
   background-color: black;
+  background-image: url('/images/NightskyImage.png');
+  background-size: cover;
 }
 
 #background-video {
