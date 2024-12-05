@@ -22,6 +22,9 @@ export default {
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: black;
+}
 
 html,
 body {
@@ -29,8 +32,6 @@ body {
   padding: 0;
   height: 101vh;
   font-family: sans-serif;
-  background-color: black;
-  
 }
 
 /* Slide transition styles */
