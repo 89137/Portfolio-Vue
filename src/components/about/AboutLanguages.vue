@@ -3,12 +3,12 @@
     <h3>/* Languages */</h3>
     <div class="lang-grid">
       <div class="lang-item">
-        <span class="lang">Engels</span>
-        <span class="level">Advanced</span>
+        <span class="lang">English</span>
+        <!-- <span class="level">Advanced</span> -->
       </div>
       <div class="lang-item">
         <span class="lang">Nederlands</span>
-        <span class="level">Advanced</span>
+        <!-- <span class="level">Advanced</span> -->
       </div>
     </div>
   </BaseCard>

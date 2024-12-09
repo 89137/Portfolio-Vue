@@ -2,9 +2,11 @@
   <BaseCard>
     <h3>// Summary</h3>
     <p class="summary">
-      Junior front-end developer with experience in Vue.js, Nuxt3, and
-      TypeScript. Currently interning at Robeco, focusing on web development and
-      modern frameworks.
+      A junior front-end developer with experience in Vue.js, Nuxt3, and
+      TypeScript. Currently, I am interning at Robeco, where I work on
+      challenging web projects and further develop my skills in web design and
+      programming. I am eager to grow in my field and open to collaboration and
+      new ideas!
     </p>
   </BaseCard>
 </template>
