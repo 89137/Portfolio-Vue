@@ -7,7 +7,7 @@ const projects = [
     title: 'Portfolio Site',
     description:
       'The second version of my Portfolio site, fully made with vue3 using routes. I am still working on it.',
-    techStack: ['Vue.js', 'Html', 'Css', 'Js'],
+    techStack: ['Vue.js', 'Routes', 'Typescript'],
     demoLink: 'https://www.belljahh.nl/',
     githubLink: 'https://github.com/89137/Portfolio-Vue/tree/main',
   },

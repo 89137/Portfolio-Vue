@@ -146,7 +146,7 @@ nav {
   color: black;
   background-color: #ffffff;
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
