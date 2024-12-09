@@ -139,7 +139,7 @@ export default {
   border-radius: 8px;
   margin-left: 15px;
   background-color: rgba(92, 77, 226, 0.1);
-  border: 1px solid rgba(0, 140, 255, 0.144);
+  border: 1px solid rgba(0, 140, 255, 0.048);
   transition: all 0.3s ease;
 }
 
