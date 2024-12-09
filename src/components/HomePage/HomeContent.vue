@@ -80,12 +80,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 @media (max-width: 950px) {
   .projects-container {
     padding: 2rem;
