@@ -20,7 +20,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import ProjectCard from '../projects/ProjectCard.vue'; // Correct path
-import { fetchProjects } from '../data/projectsData.js'; // Correct path
+import { fetchProjects } from '../data/projectsData.js'; // Import fetchProjects function
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
     const projects = ref([]);
 
     const loadProjects = async () => {
-      const data = await fetchProjects();
+      const data = await fetchProjects(); // Fetch data from Supabase
       projects.value = data;
     };
 
