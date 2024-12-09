@@ -11,6 +11,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@supabase/supabase-js": "^2.47.2",
     "core-js": "^3.6.5",
     "routes": "^2.1.0",
     "vue": "^3.0.0",

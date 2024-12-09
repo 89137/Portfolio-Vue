@@ -16,7 +16,7 @@
           <p class="project-desc">{{ project.description }}</p>
           <div class="tech-stack">
             <span
-              v-for="tech in project.techStack"
+              v-for="tech in project.techstack"
               :key="tech"
               class="tech-tag"
             >
@@ -25,15 +25,15 @@
           </div>
           <div class="card-links">
             <a
-              v-if="project.demoLink"
-              :href="project.demoLink"
+              v-if="project.demolink"
+              :href="project.demolink"
               target="_blank"
               class="card-link"
               >Live Demo</a
             >
             <a
-              v-if="project.githubLink"
-              :href="project.githubLink"
+              v-if="project.githublink"
+              :href="project.githublink"
               target="_blank"
               class="card-link"
               >GitHub</a
@@ -46,13 +46,37 @@
 </template>
 
 <script>
-import { projects } from '../data/projects.vue';
-
 export default {
   data() {
     return {
-      displayedProjects: projects.slice(0, 2),
+      // Define projects directly inside the component
+      projects: [
+        {
+          id: 1,
+          title: 'Portfolio Site',
+          description:
+            'The second version of my Portfolio site, fully made with vue3 using routes. I am still working on it.',
+          techstack: ['Vue.js', 'Routes', 'Typescript'],
+          demolink: 'https://www.belljahh.nl/',
+          githublink: 'https://github.com/89137/Portfolio-Vue/tree/main',
+        },
+        {
+          id: 2,
+          title: 'Old Portfolio Site',
+          description:
+            'My first ever Portfolio site I made at school, using only basic HTML, CSS and JS.',
+          techstack: ['HTML', 'CSS', 'JS'],
+          demolink: 'https://89137-github-io.vercel.app/',
+          githublink: 'https://github.com/89137/89137.github.io',
+        },
+        // Add more projects if necessary
+      ],
+      displayedProjects: [],
     };
+  },
+  created() {
+    // Initially show only the first 2 projects
+    this.displayedProjects = this.projects.slice(0, 2);
   },
 };
 </script>

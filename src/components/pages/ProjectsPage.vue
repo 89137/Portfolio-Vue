@@ -3,7 +3,7 @@
     <div class="projects-content">
       <BaseCard class="header">
         <h1>My Projects</h1>
-        <h2>{ Recent Work & Contributions }</h2>
+        <h2>Recent Work & Contributions</h2>
       </BaseCard>
 
       <div class="projects-list">
@@ -18,16 +18,26 @@
 </template>
 
 <script>
-import ProjectCard from '../projects/ProjectCard.vue';
-import { projects } from '../data/projects.vue';
+import { ref, onMounted } from 'vue';
+import ProjectCard from '../projects/ProjectCard.vue'; // Correct path
+import { fetchProjects } from '../data/projectsData.js'; // Correct path
 
 export default {
   components: {
     ProjectCard,
   },
-  data() {
+  setup() {
+    const projects = ref([]);
+
+    const loadProjects = async () => {
+      const data = await fetchProjects();
+      projects.value = data;
+    };
+
+    onMounted(loadProjects);
+
     return {
-      projects: projects,
+      projects,
     };
   },
 };

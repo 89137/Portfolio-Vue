@@ -2,29 +2,27 @@
   <BaseCard class="project-card">
     <div class="project-content">
       <div class="project-info">
-        <h3>// {{ project.title }}</h3>
-        <p class="project-description">
-          {{ project.description }}
-        </p>
+        <h3>{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
       </div>
       <div class="project-meta">
         <div class="tech-stack">
-          <span v-for="tech in project.techStack" :key="tech" class="tech-tag">
+          <span v-for="tech in project.techstack" :key="tech" class="tech-tag">
             {{ tech }}
           </span>
         </div>
         <div class="project-links">
           <a
-            v-if="project.demoLink && project.demoLink !== ''"
-            :href="project.demoLink"
+            v-if="project.demolink && project.demolink !== ''"
+            :href="project.demolink"
             class="project-link"
             target="_blank"
           >
             Live Demo
           </a>
           <a
-            v-if="project.githubLink && project.githubLink !== ''"
-            :href="project.githubLink"
+            v-if="project.githublink && project.githublink !== ''"
+            :href="project.githublink"
             class="project-link"
             target="_blank"
           >
