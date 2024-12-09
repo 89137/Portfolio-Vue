@@ -1,12 +1,12 @@
 <template>
-  <div class="projects-container">
-    <div class="projects-content">
-      <BaseCard class="header">
-        <h1>My Projects</h1>
-        <h2>Recent Work & Contributions</h2>
+  <div class="home-content">
+    <div class="container">
+      <BaseCard class="welcome-card">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my journey in software development</p>
       </BaseCard>
 
-      <div class="projects-list">
+      <div class="projects-grid">
         <ProjectCard
           v-for="project in projects"
           :key="project.id"
@@ -60,33 +60,45 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+  padding: 0 2rem; /* Adjust for spacing */
 }
 
-.header {
+.welcome-card {
   text-align: center;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #fff, #50fff0);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
+.welcome-card h2 {
   color: #50fff0;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 950px) {
-  .projects-container {
-    padding: 2rem;
+.welcome-card p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Smaller min size */
+  gap: 1rem; /* Adjust spacing */
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 1rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  .welcome-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
