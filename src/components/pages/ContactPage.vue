@@ -23,6 +23,11 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import {
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_USER_ID,
+} from '@/config/env.js'; // Import environment variables
 
 export default {
   data() {
@@ -44,10 +49,10 @@ export default {
         };
 
         const response = await emailjs.send(
-          process.env.VUE_APP_EMAILJS_SERVICE_ID, // Use environment variable
-          process.env.VUE_APP_EMAILJS_TEMPLATE_ID, // Use environment variable
+          EMAILJS_SERVICE_ID, // Use environment variable
+          EMAILJS_TEMPLATE_ID, // Use environment variable
           templateParams,
-          process.env.VUE_APP_EMAILJS_USER_ID // Use environment variable
+          EMAILJS_USER_ID // Use environment variable
         );
 
         console.log('Email sent successfully:', response.status, response.text);
