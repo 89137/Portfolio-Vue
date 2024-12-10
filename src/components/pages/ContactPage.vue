@@ -22,12 +22,9 @@
 </template>
 
 <script>
-import BaseCard from '@/components/UI/BaseCard.vue';
+import emailjs from 'emailjs-com';
 
 export default {
-  components: {
-    BaseCard,
-  },
   data() {
     return {
       form: {
@@ -38,13 +35,32 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      // Handle form submission
-      console.log('Form submitted:', this.form);
-      // Reset form
-      this.form.name = '';
-      this.form.email = '';
-      this.form.message = '';
+    async submitForm() {
+      try {
+        const templateParams = {
+          name: this.form.name,
+          email: this.form.email,
+          message: this.form.message,
+        };
+
+        const response = await emailjs.send(
+          process.env.VUE_APP_EMAILJS_SERVICE_ID, // Use environment variable
+          process.env.VUE_APP_EMAILJS_TEMPLATE_ID, // Use environment variable
+          templateParams,
+          process.env.VUE_APP_EMAILJS_USER_ID // Use environment variable
+        );
+
+        console.log('Email sent successfully:', response.status, response.text);
+        alert('Message sent successfully!');
+
+        // Reset form
+        this.form.name = '';
+        this.form.email = '';
+        this.form.message = '';
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('Failed to send message. Please try again later.');
+      }
     },
   },
 };
