@@ -24,6 +24,7 @@ export default {
 }
 body {
   background-color: black;
+  animation: fadeIn 0.2s ease-in-out; /* Add fade-in animation */
 }
 
 html,
@@ -60,5 +61,15 @@ body {
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>
