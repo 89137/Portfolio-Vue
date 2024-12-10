@@ -13,6 +13,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@supabase/supabase-js": "^2.47.2",
     "core-js": "^3.6.5",
+    "emailjs-com": "^3.2.0",
     "routes": "^2.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.5.0"
