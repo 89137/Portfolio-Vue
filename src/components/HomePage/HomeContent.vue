@@ -8,7 +8,7 @@
 
       <div class="projects-grid">
         <ProjectCard
-          v-for="project in projects"
+          v-for="project in filteredProjects"
           :key="project.id"
           :project="project"
         />
@@ -29,6 +29,13 @@ export default {
     return {
       projects: [],
     };
+  },
+  computed: {
+    filteredProjects() {
+      return this.projects.filter(
+        (project) => project.id === 1 || project.id === 2
+      );
+    },
   },
   created() {
     this.loadProjects();
@@ -83,7 +90,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(200px, 1fr)
+    minmax(250px, 1fr)
   ); /* Smaller min size */
   gap: 1rem; /* Adjust spacing */
 }
