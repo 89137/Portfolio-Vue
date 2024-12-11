@@ -73,7 +73,7 @@ export default {
   width: 200px; /* Adjust the width as needed */
   height: auto;
   border-radius: 20px;
-  border: 1px solid rgba(30, 119, 192, 0.048);
+  border: 1px solid rgba(14, 131, 226, 0.212);
 }
 
 .project-details {
