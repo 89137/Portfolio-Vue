@@ -11,6 +11,7 @@
           v-for="project in filteredProjects"
           :key="project.id"
           :project="project"
+          :showImage="false"
         />
       </div>
     </div>
@@ -18,8 +19,8 @@
 </template>
 
 <script>
-import ProjectCard from '../projects/ProjectCard.vue'; // Correct path
-import { supabase } from '@/supabase'; // Import supabase
+import ProjectCard from '../projects/ProjectCard.vue';
+import { fetchProjects } from '../data/projectsData.js';
 
 export default {
   components: {
@@ -37,21 +38,8 @@ export default {
       );
     },
   },
-  created() {
-    this.loadProjects();
-  },
-  methods: {
-    async loadProjects() {
-      const { data, error } = await supabase
-        .from('projects') // Your Supabase table name
-        .select('*'); // Fetch all columns
-
-      if (error) {
-        console.error('Error fetching projects:', error.message);
-      } else {
-        this.projects = data; // Store data from Supabase into the projects variable
-      }
-    },
+  async created() {
+    this.projects = await fetchProjects();
   },
 };
 </script>

@@ -1,33 +1,42 @@
 <template>
   <BaseCard class="project-card">
     <div class="project-content">
-      <div class="project-info">
-        <h3>{{ project.title }}</h3>
-        <p class="project-description">{{ project.description }}</p>
+      <div v-if="showImage && project.image" class="project-image">
+        <img :src="project.image" alt="Project Image" />
       </div>
-      <div class="project-meta">
-        <div class="tech-stack">
-          <span v-for="tech in project.techstack" :key="tech" class="tech-tag">
-            {{ tech }}
-          </span>
+      <div class="project-details">
+        <div class="project-info">
+          <h3>{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
         </div>
-        <div class="project-links">
-          <a
-            v-if="project.demolink && project.demolink !== ''"
-            :href="project.demolink"
-            class="project-link"
-            target="_blank"
-          >
-            Live Demo
-          </a>
-          <a
-            v-if="project.githublink && project.githublink !== ''"
-            :href="project.githublink"
-            class="project-link"
-            target="_blank"
-          >
-            GitHub
-          </a>
+        <div class="project-meta">
+          <div class="tech-stack">
+            <span
+              v-for="tech in project.techstack"
+              :key="tech"
+              class="tech-tag"
+            >
+              {{ tech }}
+            </span>
+          </div>
+          <div class="project-links">
+            <a
+              v-if="project.demolink && project.demolink !== ''"
+              :href="project.demolink"
+              class="project-link"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+            <a
+              v-if="project.githublink && project.githublink !== ''"
+              :href="project.githublink"
+              class="project-link"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -41,6 +50,10 @@ export default {
       type: Object,
       required: true,
     },
+    showImage: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
 </script>
@@ -52,8 +65,21 @@ export default {
 
 .project-content {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+}
+
+.project-image img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(30, 119, 192, 0.048);
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-info h3 {
@@ -64,6 +90,7 @@ export default {
 .project-description {
   color: white;
   line-height: 1.6;
+  padding-bottom: 10px;
 }
 
 .project-meta {
