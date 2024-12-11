@@ -70,7 +70,8 @@ export default {
 }
 
 .project-image img {
-  width: 200px; /* Adjust the width as needed */
+  width: 10vw;
+  max-width: 185px; /* Adjust the width as needed */
   height: auto;
   border-radius: 20px;
   border: 1px solid rgba(14, 131, 226, 0.212);
