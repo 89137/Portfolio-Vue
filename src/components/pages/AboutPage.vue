@@ -4,11 +4,11 @@
     <AboutSummary />
     <AboutExperience />
     <div class="two-column">
+      <AboutTechStack />
       <AboutEducation />
-      <AboutCertifications />
     </div>
     <div class="two-column">
-      <AboutTechStack />
+      <AboutCertifications />
       <AboutLanguages />
     </div>
   </div>
