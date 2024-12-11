@@ -72,7 +72,7 @@ export default {
 .project-image img {
   width: 200px; /* Adjust the width as needed */
   height: auto;
-  border-radius: 8px;
+  border-radius: 20px;
   border: 1px solid rgba(30, 119, 192, 0.048);
 }
 
