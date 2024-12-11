@@ -2,7 +2,7 @@
   <BaseCard class="project-card">
     <div class="project-content">
       <div v-if="showImage && project.image" class="project-image">
-        <img :src="project.image" alt="Project Image" />
+        <img :src="project.image" :alt="'Screenshot of ' + project.title" />
       </div>
       <div class="project-details">
         <div class="project-info">
@@ -25,6 +25,7 @@
               :href="project.demolink"
               class="project-link"
               target="_blank"
+              :aria-label="'Visit the live demo for ' + project.title"
             >
               Live Demo
             </a>
@@ -33,6 +34,7 @@
               :href="project.githublink"
               class="project-link"
               target="_blank"
+              :aria-label="'View the GitHub repository for ' + project.title"
             >
               GitHub
             </a>
@@ -42,6 +44,7 @@
     </div>
   </BaseCard>
 </template>
+
 
 <script>
 export default {
